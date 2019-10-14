@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>NBA Score Margin Graph</title>
+</head>
+<body>
+<form action="#" th:action="@{/scoreboard}" th:object="${gamedate}" method="post">
+    <h2>Select an NBA Game</h2>
+    <p> Enter a date: </p><br>
+    <input type="date" th:field="*{date}" min="1999-10-06"/><br><br>
+    <input type="submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>NBA Score Margin Graph</title>
+</head>
+<body>
+    <form action="#"  th:action="@{/graph}" th:object="${gamescores}" method="post">
+        <select name="game" id="game_id" method="POST">
+            <tr th:each="gamescore: ${gamescores}">
+                <option th:text="${gamescore.gameName}">"${gamescore}"</option>
+            </tr>
+        </select>
+        <input type="submit" value="View score margin graph">
+    </form>
+</body>
+</html>
