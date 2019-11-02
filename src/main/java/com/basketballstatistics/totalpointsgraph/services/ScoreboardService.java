@@ -1,16 +1,33 @@
 package com.basketballstatistics.totalpointsgraph.services;
 
-import java.util.Dictionary;
-import java.util.Hashtable;
+import java.util.List;
 
 public class ScoreboardService {
-    private Dictionary scores = new Hashtable();
+    private List<PlayByPlayService> games;
+    private PlayByPlayService game;
+    private String gameID;
 
-    public Dictionary getScores() {
-        return scores;
+    public List<PlayByPlayService> getGames() {
+        return games;
     }
 
-    public void setScores(Dictionary scores) {
-        this.scores = scores;
+    public void setGames(List<PlayByPlayService> games) {
+        this.games = games;
+    }
+
+    public PlayByPlayService getGame() {
+        return game;
+    }
+
+    public void setGame(PlayByPlayService game) {
+        this.game = game;
+    }
+
+    public String getGameID() {
+        return gameID;
+    }
+
+    public void setGameID(String gameID) {
+        this.gameID = gameID;
     }
 }

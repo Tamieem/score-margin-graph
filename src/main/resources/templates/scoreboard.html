@@ -5,10 +5,10 @@
     <title>NBA Score Margin Graph</title>
 </head>
 <body>
-    <form action="#"  th:action="@{/graph}" th:object="${gamescores}" method="post">
-        <select name="game" id="game_id" method="POST">
-            <tr th:each="gamescore: ${gamescores}">
-                <option th:text="${gamescore.gameName}">"${gamescore}"</option>
+    <form action="#"  th:action="@{/graph}" th:object="${gamescore}" method="post">
+        <select name="game" value="PlayByPlayService" method="POST">
+            <tr>
+                <option th:each="gamescore: ${gamescores}" th:text="${gamescore.gameName}" th:value="${gamescore.gameID}"> Select a Game</option>
             </tr>
         </select>
         <input type="submit" value="View score margin graph">

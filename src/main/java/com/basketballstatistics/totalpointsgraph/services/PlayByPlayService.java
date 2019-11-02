@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 public class PlayByPlayService {
     private String gameID;
     private String gameName;
+    private String date;
 
     public void setGameID(String gameID) {
         this.gameID = gameID;
@@ -21,5 +22,13 @@ public class PlayByPlayService {
 
     public void setGameName(String gameName) {
         this.gameName = gameName;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }
