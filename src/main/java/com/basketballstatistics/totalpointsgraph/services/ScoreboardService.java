@@ -1,33 +1,34 @@
 package com.basketballstatistics.totalpointsgraph.services;
 
-import java.util.List;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ScoreboardService {
-    private List<PlayByPlayService> games;
-    private PlayByPlayService game;
     private String gameID;
+    private String gameName;
+    private String date;
 
-    public List<PlayByPlayService> getGames() {
-        return games;
-    }
-
-    public void setGames(List<PlayByPlayService> games) {
-        this.games = games;
-    }
-
-    public PlayByPlayService getGame() {
-        return game;
-    }
-
-    public void setGame(PlayByPlayService game) {
-        this.game = game;
+    public void setGameID(String gameID) {
+        this.gameID = gameID;
     }
 
     public String getGameID() {
         return gameID;
     }
 
-    public void setGameID(String gameID) {
-        this.gameID = gameID;
+    public String getGameName() {
+        return gameName;
+    }
+
+    public void setGameName(String gameName) {
+        this.gameName = gameName;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }

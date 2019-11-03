@@ -1,19 +1,15 @@
 package com.basketballstatistics.totalpointsgraph.services;
 
-import org.springframework.stereotype.Component;
+import java.util.HashMap;
+import java.util.List;
 
-@Component
 public class PlayByPlayService {
-    private String gameID;
+    private List<HashMap> pbp;
     private String gameName;
-    private String date;
+    private String homeTeam;
+    private String awayTeam;
 
-    public void setGameID(String gameID) {
-        this.gameID = gameID;
-    }
-
-    public String getGameID() {
-        return gameID;
+    public PlayByPlayService() {
     }
 
     public String getGameName() {
@@ -24,11 +20,27 @@ public class PlayByPlayService {
         this.gameName = gameName;
     }
 
-    public String getDate() {
-        return date;
+    public List<HashMap> getPbp() {
+        return pbp;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setPbp(List<HashMap> pbp) {
+        this.pbp = pbp;
+    }
+
+    public String getAwayTeam() {
+        return awayTeam;
+    }
+
+    public void setAwayTeam(String awayTeam) {
+        this.awayTeam = awayTeam;
+    }
+
+    public String getHomeTeam() {
+        return homeTeam;
+    }
+
+    public void setHomeTeam(String homeTeam) {
+        this.homeTeam = homeTeam;
     }
 }
